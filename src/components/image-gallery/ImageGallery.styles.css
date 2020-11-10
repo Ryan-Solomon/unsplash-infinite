@@ -1,0 +1,13 @@
+.gallery-container {
+  padding: 5rem 0;
+}
+
+.photos-center {
+  padding: 5rem 0;
+  max-width: 1170px;
+  width: 90vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(368px, 1fr));
+  gap: 2rem;
+}

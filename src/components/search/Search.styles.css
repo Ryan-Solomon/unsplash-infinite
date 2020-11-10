@@ -1,0 +1,18 @@
+.search-container {
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+}
+
+.search-container input {
+  padding: 1rem;
+  width: 30vw;
+  border-radius: 2px;
+  outline: none;
+}
+
+.line {
+  margin-top: 2rem;
+  border: 1px solid rgb(0, 255, 242);
+  width: 50vw;
+}
