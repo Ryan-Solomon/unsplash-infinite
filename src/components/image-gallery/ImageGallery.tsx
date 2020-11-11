@@ -27,6 +27,7 @@ const ImageGallery = () => {
       setPage((page: number) => page + 1);
     }
   };
+
   if (!images) return <h1>...loading</h1>;
 
   return (
@@ -37,7 +38,7 @@ const ImageGallery = () => {
         })}
       </div>
       <div className='loading' ref={loader}>
-        <h2>Load More</h2>
+        <h2 style={{ color: ' #181818' }}>Load More</h2>
       </div>
     </section>
   );

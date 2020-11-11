@@ -27,9 +27,7 @@ export const AppProvider: FC<ReactNode> = ({ children }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [page, setPage] = useState<(p: number) => void | number>(() => 1);
 
-  const unsplashUrl = `https://api.unsplash.com/search/photos?page=${page}&query=${
-    searchTerm || 'car'
-  }&client_id=${process.env.REACT_APP_ACCESS_KEY}`;
+  const unsplashUrl = `https://api.unsplash.com/search/photos?page=${page}&query=${searchTerm}&client_id=${process.env.REACT_APP_ACCESS_KEY}`;
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -37,7 +35,7 @@ export const AppProvider: FC<ReactNode> = ({ children }) => {
 
       const { results } = await res.json();
       console.log(res);
-      setImages(results);
+      setImages((images) => [...images, ...results]);
     };
 
     fetchImages();
