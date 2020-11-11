@@ -9,7 +9,10 @@ type Props = {
 const ImageComponent: FC<Props> = ({ image }) => {
   return (
     <section className='image'>
-      <img src={image.urls.thumb} alt={image.description} />
+      <img src={image.urls.thumb} alt='car' />
+      <div className='description'>
+        <p>{image.description}</p>
+      </div>
     </section>
   );
 };

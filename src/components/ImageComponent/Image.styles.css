@@ -10,3 +10,21 @@
   object-fit: cover;
   display: block;
 }
+
+.image .description {
+  position: absolute;
+  color: white;
+  bottom: 0rem;
+  width: 100%;
+  text-align: center;
+  padding: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.image:hover .description {
+  opacity: 1;
+  transform: translate(0);
+}
